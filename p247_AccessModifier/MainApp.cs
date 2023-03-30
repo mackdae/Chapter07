@@ -14,8 +14,8 @@ namespace p247_AccessModifier
     // internal 같은 어셈블리에 있는 코드에서만 public으로 접근가능, 그외 private
     // protected internal 같은 어셈블리에 있는 코드에서만 protected로 접근가능, 그외 private
     // pribate protected 같은 어셈블리에 있는 클래스에서 상속받은 클래스 내부에서만 접근가능
-    //어셈블리: 컴파일을 통해 나온 결과 파일 및 배포의 단위
-    //접근한정자로 수식하지 않은 클래스의 맴버는 무조건 private로 자동지정됨
+    // 어셈블리: 컴파일을 통해 나온 결과 파일 및 배포의 단위
+    // 접근한정자로 수식하지 않은 클래스의 맴버는 무조건 private로 자동지정됨
 
     //예시
     //private int Myfield_1;
@@ -62,6 +62,8 @@ namespace p247_AccessModifier
             {
                 Console.WriteLine(e.Message);
             }
+            //트라이캐치는 마지막 방어수단. 고투처럼 흐름을 깸
+            //클라이언트에선 거의 안씀 서버쪽에선 주구장창 씀
         }
     }
 }
