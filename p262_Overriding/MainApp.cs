@@ -6,7 +6,6 @@ namespace p262_Overriding
     //다형성: 객체가 여러 형체를 가질 수 있음.
     //하위형식다형성의 준말, 파생클래스를 통해 다형성을 실현
     //오버라이딩: virtual, override
-    //
 
     class ArmorSuite
     {

@@ -3,13 +3,13 @@
 namespace p253_Inheritance
 {
     //7.8 상속으로 코드 재활용하기
+    //콜론: 상속
 
     /*
     class Base // 기반클래스
     {
         public void baseMethod() //맴버선언
-        {
-        }
+        {   ...   }
     }
     class Derived : Base //class 파생클래스 : 기반클래스
     {
