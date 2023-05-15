@@ -30,12 +30,14 @@ namespace p247_AccessModifier
     {
         protected int temperature;
         public void SetTemperature(int temperature)
+        // -5~42 사이의 값만 받아들이고 범위를 벗어난 값은 예외 발생
         {
             if (temperature < -5 || temperature > 42)
             {
                 throw new Exception("Out of temperature range");
             }
             this.temperature = temperature;
+            // temperature 필드는 외부에서 직접 접근 불가, public 메소드를 통해 접근
         }
         internal void TurnOnWater()
         {
@@ -55,8 +57,8 @@ namespace p247_AccessModifier
                 heater.SetTemperature(-2);
                 heater.TurnOnWater();
 
-                heater.SetTemperature(50);
-                heater.TurnOnWater();
+                heater.SetTemperature(50); // 여기서 예외발생
+                heater.TurnOnWater(); // 실행되지 않고 catch 블록으로 실행위치 이동
             }
             catch (Exception e)
             {

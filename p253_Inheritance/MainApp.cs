@@ -13,39 +13,40 @@ namespace p253_Inheritance
     }
     class Derived : Base //class 파생클래스 : 기반클래스
     {
-        //아무 맴버를 선언하지 않아도 기반 클래스의 모든 것을 물려받아 갖게 됨
-        //private는 제외
+        //아무 맴버를 선언하지 않아도 기반 클래스의 (private를 제외한) 멤버를 물려받아 갖게 됨
     }
     */
 
     class Base
     {
-        protected string Name;
-        public Base(string Name)
+        protected string Name; // 필드
+        public Base(string Name) // 생성자
         {
-            this.Name = Name;
+            this.Name = Name; // 매개변수를 받아서 필드를 초기화
             Console.WriteLine($"{this.Name}.Base()");
         }
-        ~Base()
-        {
-            Console.WriteLine($"{this.Name}.~Base()");
-        }
-        public void BaseMethod()
-        {
-            Console.WriteLine($"{Name}.BaseMethod()");
-        }
+        ~Base() // 소멸자
+        { Console.WriteLine($"{this.Name}.~Base()"); }
+        public void BaseMethod() // 메소드
+        { Console.WriteLine($"{Name}.BaseMethod()"); }
     }
-    class Derived : Base
+    class Derived : Base // Derived 클래스는 Base 클래스를 상속했으므로 BaseMethod()를 가짐
     {
-        public Derived(string Name) : base(Name)
+
+        public Derived(string Name) : base(Name) // 생성자
+                                                 // base(Name) = Base(string Name) 호출
+                                                 // base()는 기반 클래스의 생성자 
         {
+            // base.BaseMethod();
+            // base 키워드를 통해 기반클래스에 속한 메서드에 접근 가능
+
             Console.WriteLine($"{this.Name}.Derived()");
         }
-        ~Derived()
+        ~Derived() // 종료자
         {
             Console.WriteLine($"{this.Name}.~Derived()");
         }
-        public void DerivedMethod()
+        public void DerivedMethod() // 메소드
         {
             Console.WriteLine($"{Name}.DerivedMethod()");
         }
@@ -63,3 +64,5 @@ namespace p253_Inheritance
         }
     }
 }
+
+// sealed 한정자로 수식한 클래스는 상속봉인
