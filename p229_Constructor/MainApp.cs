@@ -6,7 +6,6 @@ namespace p229_Constructor
     //객체가 생성될 때는 생성자가 호출되고 소멸할 때는 종료자가 호출됨
     //생성자는 클래스와 이름이 같고 반환형식이 없음
 
-
     class Cat
     {
         public string Name; // 필드

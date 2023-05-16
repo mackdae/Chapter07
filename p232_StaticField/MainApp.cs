@@ -11,7 +11,6 @@
 
 // static 멤버는 클래스의 인스턴스를 생성하지 않고 직접 호출 가능
 
-
 class Global
 {
     public static int Count = 0; // 정적 필드

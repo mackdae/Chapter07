@@ -43,7 +43,7 @@ namespace p243_ThisConstructor
         { Console.WriteLine($"a:{a}, b:{b}, C:{c}"); }
     }
 
-    class MainApp
+    class Program
     {
         static void Main(string[] args)
         {
